@@ -112,7 +112,7 @@ function Index() {
   return (
     <div className="min-h-screen bg-background pb-24 text-foreground">
       <div className="sticky top-0 z-40 bg-primary-deep px-4 py-2.5 text-center text-sm font-bold text-primary-foreground">
-        ⏰ Esta oferta fica disponível até <span className="text-gold">11/11/2026</span>
+        ⏰ Esta oferta fica disponível até <span className="text-gold">15/11/2026</span>
       </div>
 
       {/* HERO */}
