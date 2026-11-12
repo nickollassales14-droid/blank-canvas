@@ -120,7 +120,7 @@ function Index() {
         <h1 className="font-display text-4xl font-black leading-[1.05] sm:text-6xl">
           <span className="text-primary underline decoration-current decoration-2 underline-offset-[6px] sm:decoration-4">365 Receitas Leves e Deliciosas,</span> Sem Açúcar, Glúten ou Lactose
         </h1>
-        <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">ideias práticas para saborear todos os dias e aproveitar cada refeição</p>
+        <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">ideias práticas para saborear todos os dias e aproveitar cada refeição!</p>
         <img src={banner} alt="365 Receitas Sem Açúcar, Sem Glúten e Sem Lactose" className="mx-auto mt-8 w-full max-w-xl drop-shadow-2xl" />
         <p className="mx-auto mt-6 max-w-xl text-base font-semibold">Prepare bolos, pães, doces, lanches e refeições mais leves e saborosas para o seu dia a dia.</p>
         <div className="mt-6"><Cta>Quero receber as 365 receitas!</Cta></div>
