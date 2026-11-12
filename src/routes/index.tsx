@@ -6,11 +6,6 @@ import bShop from "@/assets/bonus-shopping-list.webp.asset.json";
 import bMeal from "@/assets/bonus-meal-plan.webp.asset.json";
 import bSub from "@/assets/bonus-substitutions.webp.asset.json";
 import revBrownie from "@/assets/review-brownie.jpg.asset.json";
-import testimonial1 from "@/assets/depoimento-1.png.asset.json";
-import testimonial2 from "@/assets/depoimento-2.png.asset.json";
-import testimonial3 from "@/assets/depoimento-3.png.asset.json";
-import testimonial4 from "@/assets/depoimento-4.png.asset.json";
-import testimonial5 from "@/assets/depoimento-5.png.asset.json";
 
 const CHECKOUT_BASIC = "https://pay.wiapy.com/Ci6of1B5M1ll?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=";
 const CHECKOUT_PREMIUM = "https://pay.wiapy.com/3IdUSNfye7KS?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=";
@@ -54,7 +49,13 @@ const benefits = [
   ["✨", "Mais variedade para sair da rotina"], ["📱", "Consulte no celular ou imprima"],
 ];
 const gallery = ["https://i.imgur.com/54fZgju.png", "https://i.imgur.com/JCYrYsk.png", "https://i.imgur.com/BWTdeN8.png", "https://i.imgur.com/8zjkqxs.png"];
-const prints = [testimonial1.url, testimonial2.url, testimonial3.url, testimonial4.url, testimonial5.url];
+const prints = [
+  "/depoimentos/thefake-whatsapp-1794446675905.png",
+  "/depoimentos/thefake-whatsapp-1794447180937.png",
+  "/depoimentos/thefake-whatsapp-1794447619872.png",
+  "/depoimentos/thefake-whatsapp-1794447841206.png",
+  "/depoimentos/thefake-whatsapp-1794450917808.png",
+];
 const recipes = [
   ["https://i.imgur.com/9XqdBay.png", "Bolo de Cenoura com Cobertura Cremosa", "Bem fofinho, na medida certa e sem açúcar refinado"],
   ["https://i.imgur.com/1yPajyN.png", "Pão Caseiro Sem Glúten", "Leve, fácil de preparar e ótimo para o café"],
@@ -156,7 +157,11 @@ function Index() {
           <div className="testimonial-track">
             {[0, 1].map((copy) => (
               <div key={copy} className="testimonial-sequence" aria-hidden={copy === 1 ? true : undefined}>
-                {prints.map((p, i) => <img key={p} src={p} alt={copy === 0 ? `Depoimento ${i + 1}` : ""} loading="eager" decoding="async" width={1080} height={1080} className="testimonial-image shrink-0 rounded-2xl border border-border shadow-md" />)}
+                {prints.map((p, i) => (
+                  <div key={p} className="testimonial-card shrink-0 rounded-2xl border border-border shadow-md">
+                    <img src={p} alt={copy === 0 ? `Depoimento ${i + 1}` : ""} loading="eager" decoding="async" width={1080} height={1080} className="testimonial-image" />
+                  </div>
+                ))}
               </div>
             ))}
           </div>
