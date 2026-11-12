@@ -111,7 +111,7 @@ function Index() {
       {/* HERO */}
       <section className="mx-auto max-w-3xl px-5 pb-12 pt-10 text-center">
         <h1 className="font-display text-4xl font-black leading-[1.05] sm:text-6xl">
-          <span className="text-primary">365 Receitas</span> Sem Açúcar, Sem Glúten e Sem Lactose
+          <span className="text-primary">365 Receitas Leves e Deliciosas,</span> Sem Açúcar, Glúten ou Lactose
         </h1>
         <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">receitas práticas para comer bem todos os dias sem abrir mão do prazer à mesa</p>
         <img src={banner.url} alt="365 Receitas Sem Açúcar, Sem Glúten e Sem Lactose" className="mx-auto mt-8 w-full max-w-xl drop-shadow-2xl" />
