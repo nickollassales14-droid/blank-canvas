@@ -14,9 +14,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "365 Receitas Sem Açúcar, Sem Glúten e Sem Lactose | Chef Luana" },
-      { name: "description", content: "Bolos, pães, sobremesas, lanches e refeições leves e deliciosas. Acesso imediato + 3 bônus exclusivos." },
+      { name: "description", content: "Bolos, pães, sobremesas, lanches e refeições leves e saborosas. Acesso imediato + 3 presentes exclusivos." },
       { property: "og:title", content: "365 Receitas Sem Açúcar, Sem Glúten e Sem Lactose" },
-      { property: "og:description", content: "Receitas práticas para comer bem todos os dias sem abrir mão do prazer à mesa." },
+      { property: "og:description", content: "Prepare pratos práticos para o dia a dia e aproveite cada refeição com muito sabor." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -43,22 +43,22 @@ function Title({ children, light }: { children: React.ReactNode; light?: boolean
 }
 
 const benefits = [
-  ["🍰", "365 receitas doces e salgadas"], ["🌿", "Sem açúcar, sem glúten e sem lactose"],
-  ["📖", "Receitas simples e ilustradas"], ["🍽️", "Café, almoço, jantar e sobremesa"],
-  ["🪶", "Mais leveza sem perder o sabor"], ["👩‍🍳", "Fáceis para quem não tem prática"],
-  ["✨", "Adeus à mesmice e ao sem graça"], ["📱", "Acesso no celular ou impresso"],
+  ["🍰", "365 opções doces e salgadas"], ["🌿", "Sem açúcar, glúten ou lactose"],
+  ["📖", "Passo a passo simples e ilustrado"], ["🍽️", "Ideias para todas as refeições"],
+  ["🪶", "Refeições mais leves e saborosas"], ["👩‍🍳", "Preparo fácil até para iniciantes"],
+  ["✨", "Mais variedade para sair da rotina"], ["📱", "Consulte no celular ou imprima"],
 ];
 const gallery = ["https://i.imgur.com/54fZgju.png", "https://i.imgur.com/JCYrYsk.png", "https://i.imgur.com/BWTdeN8.png", "https://i.imgur.com/8zjkqxs.png"];
 const prints = ["https://i.imgur.com/c9fOqG0.png", "https://i.imgur.com/1KLUKCZ.png", "https://i.imgur.com/ag5ojSh.png", "https://i.imgur.com/FHc94su.png"];
 const recipes = [
-  ["https://i.imgur.com/9XqdBay.png", "Bolo de Cenoura com Cobertura Cremosa", "Fofinho, doce na medida e sem açúcar refinado"],
-  ["https://i.imgur.com/1yPajyN.png", "Pão Caseiro Sem Glúten", "Macio, simples e perfeito para o café da manhã"],
-  ["https://i.imgur.com/cY8OF7l.png", "Panqueca Leve de Banana", "Rápida, nutritiva e sem lactose"],
-  ["https://i.ibb.co/ynNxVxN0/Lasanha-vegan-Made-by-Choices.webp", "Lasanha Cremosa Sem Glúten", "Confortável, saborosa e perfeita para a família"],
-  ["https://i.imgur.com/wS19SoM.png", "Brigadeiro Sem Açúcar", "Cremoso, chocolatudo e sem culpa"],
-  ["https://i.imgur.com/tql5cat.png", "Torta Salgada de Frango", "Prática, leve e ótima para qualquer refeição"],
-  ["https://i.ibb.co/8g3T7TDc/Small-Batch-Brownies-Eats-Delightful.webp", "Brownie Fit de Chocolate", "Úmido, intenso e sem farinha de trigo"],
-  ["https://i.ibb.co/WNVfYtVy/Cookies-Veganos-com-peda-os-de-Chocolate-Cozinha-Roman.webp", "Cookie Crocante Sem Glúten", "Crocante por fora, macio por dentro"],
+  ["https://i.imgur.com/9XqdBay.png", "Bolo de Cenoura com Cobertura Cremosa", "Bem fofinho, na medida certa e sem açúcar refinado"],
+  ["https://i.imgur.com/1yPajyN.png", "Pão Caseiro Sem Glúten", "Leve, fácil de preparar e ótimo para o café"],
+  ["https://i.imgur.com/cY8OF7l.png", "Panqueca Leve de Banana", "Fica pronta rapidinho e não leva lactose"],
+  ["https://i.ibb.co/ynNxVxN0/Lasanha-vegan-Made-by-Choices.webp", "Lasanha Cremosa Sem Glúten", "Uma refeição saborosa para compartilhar em família"],
+  ["https://i.imgur.com/wS19SoM.png", "Brigadeiro Sem Açúcar", "Muito cremoso, com sabor de chocolate e sem culpa"],
+  ["https://i.imgur.com/tql5cat.png", "Torta Salgada de Frango", "Fácil de fazer e combina com qualquer refeição"],
+  ["https://i.ibb.co/8g3T7TDc/Small-Batch-Brownies-Eats-Delightful.webp", "Brownie Fit de Chocolate", "Textura úmida, sabor marcante e sem farinha de trigo"],
+  ["https://i.ibb.co/WNVfYtVy/Cookies-Veganos-com-peda-os-de-Chocolate-Cozinha-Roman.webp", "Cookie Crocante Sem Glúten", "Douradinho e crocante por fora, macio por dentro"],
 ];
 const categories = [
   ["Café da Manhã Leve", 50], ["Pães, Bolos e Massas Sem Glúten", 55], ["Almoços e Jantares Práticos", 70],
@@ -66,34 +66,34 @@ const categories = [
   ["Molhos, Cremes e Acompanhamentos", 25], ["Bebidas, Vitaminas e Extras", 15],
 ] as const;
 const forYou = [
-  "Quer comer melhor sem viver de comida sem graça", "Sente que açúcar, glúten ou lactose pesam na sua rotina",
-  "Quer preparar receitas leves, bonitas e saborosas em casa", "Cansou de procurar opções diferentes e nunca saber o que fazer",
-  "Precisa de ideias rápidas para o café, almoço, jantar e sobremesa", "Quer agradar a família mesmo fazendo receitas mais equilibradas",
+  "Deseja se alimentar melhor sem abrir mão do sabor", "Percebe que açúcar, glúten ou lactose não caem bem na rotina",
+  "Quer fazer em casa pratos leves, apetitosos e bonitos", "Está cansado(a) de buscar novidades sem saber o que preparar",
+  "Precisa de sugestões rápidas para diferentes refeições", "Quer servir opções equilibradas que agradem à família",
 ];
 const bonuses = [
-  [bShop.url, "Lista de Compras Essenciais", "Ingredientes certos para montar sua despensa sem erro.", "R$ 29,90"],
-  [bMeal.url, "Cardápio de 30 Dias", "Ideias prontas para variar suas refeições o mês inteiro.", "R$ 39,90"],
-  [bSub.url, "Guia de Substituições", "Trocas simples para manter sabor, textura e cremosidade.", "R$ 24,90"],
+  [bShop.url, "Lista de Compras Essenciais", "Saiba quais itens escolher para organizar sua despensa.", "R$ 29,90"],
+  [bMeal.url, "Cardápio de 30 Dias", "Sugestões preparadas para renovar as refeições durante o mês.", "R$ 39,90"],
+  [bSub.url, "Guia de Substituições", "Aprenda alternativas fáceis que preservam sabor e textura.", "R$ 24,90"],
 ];
 const reviews = [
-  ["AM", "Ana M.", "12 de março de 2025", "Eu achava que receita sem açúcar ficava sem graça, mas o bolo de cenoura me surpreendeu. Ficou fofinho e todo mundo aqui em casa comeu sem perceber diferença.", "https://i.imgur.com/UY37i9U.png", 34],
-  ["JS", "Juliana S.", "3 de abril de 2025", "Comprei por causa das sobremesas e já fiz brownie, brigadeiro e panqueca. Tudo simples e gostoso. Agora tenho opção quando bate vontade de doce.", revBrownie.url, 28],
-  ["CF", "Camila F.", "28 de março de 2025", "Eu sempre ficava meio pesada depois de comer pão e massa. As versões sem glúten do livro me ajudaram muito a variar o café da manhã e os lanches.", "https://i.imgur.com/3xXF7tP.png", 51],
-  ["PR", "Patricia R.", "18 de fevereiro de 2025", "Minha filha tem restrição com lactose e eu vivia sem ideia do que fazer. Agora consigo preparar bolo, torta e até receitas cremosas que ela ama.", "https://i.imgur.com/z8Xaea1.png", 62],
-  ["RB", "Renata B.", "5 de abril de 2025", "As receitas são bem explicadas e não pedem ingredientes impossíveis. Fiz a torta salgada e virou receita fixa aqui em casa.", "https://i.imgur.com/Hfbl72C.png", 47],
-  ["LC", "Larissa C.", "21 de março de 2025", "Os cookies sem glúten ficaram perfeitos. Crocantes por fora, macios por dentro. Meu marido nem acreditou que eram sem açúcar refinado.", "https://i.imgur.com/zGqQ3BH.png", 39],
+  ["AM", "Ana M.", "12 de março de 2025", "Eu pensava que doces sem açúcar não tinham graça, até provar o bolo de cenoura. Ficou tão fofinho que todos aqui em casa adoraram e nem notaram diferença.", "https://i.imgur.com/UY37i9U.png", 34],
+  ["JS", "Juliana S.", "3 de abril de 2025", "As sobremesas me atraíram e já preparei brownie, brigadeiro e panqueca. São receitas práticas e deliciosas. Agora tenho alternativas sempre que quero um docinho.", revBrownie.url, 28],
+  ["CF", "Camila F.", "28 de março de 2025", "Depois de comer pães e massas, eu costumava me sentir pesada. As receitas sem glúten do livro trouxeram mais variedade para meus cafés da manhã e lanches.", "https://i.imgur.com/3xXF7tP.png", 51],
+  ["PR", "Patricia R.", "18 de fevereiro de 2025", "Minha filha não pode consumir lactose e eu não sabia mais o que preparar. Agora faço bolo, torta e até pratos cremosos que ela adora.", "https://i.imgur.com/z8Xaea1.png", 62],
+  ["RB", "Renata B.", "5 de abril de 2025", "As instruções são claras e os ingredientes são fáceis de encontrar. Preparei a torta salgada e ela já entrou para o nosso cardápio de casa.", "https://i.imgur.com/Hfbl72C.png", 47],
+  ["LC", "Larissa C.", "21 de março de 2025", "Os cookies sem glúten ficaram ótimos: crocantes por fora e macios no meio. Meu marido se surpreendeu ao saber que não levavam açúcar refinado.", "https://i.imgur.com/zGqQ3BH.png", 39],
 ] as const;
-const delivery = [["📱", "No Celular", "Acesse onde estiver"], ["💻", "No Computador", "Tela grande pra cozinhar"], ["🖨️", "Para Imprimir", "Seu caderno de receitas"], ["⚡", "Envio Imediato", "Liberado em segundos"]];
+const delivery = [["📱", "No Celular", "Consulte de onde estiver"], ["💻", "No Computador", "Acompanhe em uma tela maior"], ["🖨️", "Para Imprimir", "Monte seu próprio caderno"], ["⚡", "Envio Imediato", "Acesso liberado em segundos"]];
 const faq = [
-  ["As receitas ficam gostosas de verdade?", "Sim. As receitas foram pensadas para manter sabor, textura e aparência de comida comum, mas em versões sem açúcar, sem glúten e sem lactose. A ideia é comer melhor sem sentir que está em uma dieta sem graça."],
-  ["São receitas saudáveis de verdade?", "São receitas mais leves e equilibradas, feitas para quem quer reduzir açúcar, glúten e lactose no dia a dia. Ainda assim, o foco é praticidade e sabor, com opções para diferentes momentos da rotina."],
-  ["Preciso comprar ingredientes caros ou difíceis?", "Não. A maior parte das receitas usa ingredientes acessíveis e fáceis de encontrar em mercados comuns. O objetivo é facilitar sua vida, não complicar."],
-  ["As receitas servem para a família toda?", "Sim. As receitas foram criadas para agradar adultos, crianças e pessoas que querem comer de forma mais leve, mesmo sem ter restrições alimentares."],
-  ["São receitas simples de fazer?", "Sim. O material foi feito para a cozinha do dia a dia, com passo a passo direto, ingredientes organizados e preparos fáceis de acompanhar."],
-  ["Preciso saber cozinhar para aproveitar?", "Não. Mesmo quem tem pouca prática consegue acompanhar as receitas, porque o conteúdo é simples, didático e pensado para iniciantes."],
-  ["Como vou receber o produto?", "Após a compra, você recebe o acesso imediatamente no seu e-mail. Pode abrir pelo celular, computador, tablet ou imprimir se preferir."],
-  ["E se eu não gostar?", "Você tem 15 dias de garantia incondicional. Se não ficar satisfeito(a), basta solicitar o reembolso dentro do prazo e seu dinheiro será devolvido."],
-  ["Por quanto tempo tenho acesso?", "O acesso é vitalício. Você compra uma vez e pode consultar as receitas sempre que quiser."],
+  ["As receitas são saborosas mesmo?", "Sim. Cada receita foi pensada para conservar o sabor, a textura e o visual que você espera, em versões sem açúcar, glúten e lactose. Assim, dá para comer melhor sem abrir mão do prazer à mesa."],
+  ["Posso considerar as receitas mais saudáveis?", "São preparações mais leves e equilibradas, para quem pretende diminuir açúcar, glúten e lactose no cotidiano. O material prioriza praticidade e sabor, com sugestões para vários momentos do dia."],
+  ["Vou precisar de ingredientes caros ou difíceis de achar?", "Não. A maioria das receitas leva itens acessíveis, encontrados em mercados comuns. A proposta é deixar o preparo mais fácil para você."],
+  ["A família toda pode comer essas receitas?", "Sim. Elas foram pensadas para agradar adultos, crianças e quem busca refeições mais leves, inclusive pessoas sem restrições alimentares."],
+  ["É fácil preparar as receitas?", "Sim. O conteúdo foi desenvolvido para a cozinha do dia a dia, com instruções objetivas, ingredientes bem organizados e preparos fáceis de seguir."],
+  ["Preciso ter experiência na cozinha?", "Não. Mesmo sem muita prática, você consegue acompanhar: o material é didático, direto e pensado também para quem está começando."],
+  ["Como receberei o produto?", "Assim que concluir a compra, o acesso será enviado para seu e-mail. Você poderá consultar pelo celular, computador ou tablet, ou imprimir o material."],
+  ["E se eu não ficar satisfeito(a)?", "A compra tem garantia incondicional de 15 dias. Caso não esteja satisfeito(a), solicite o reembolso dentro desse período para receber seu dinheiro de volta."],
+  ["Por quanto tempo posso acessar?", "O acesso não expira. Você paga uma vez e pode voltar às receitas sempre que desejar."],
 ];
 
 function Check() {
@@ -105,7 +105,7 @@ function Index() {
   return (
     <div className="min-h-screen bg-background pb-24 text-foreground">
       <div className="sticky top-0 z-40 bg-primary-deep px-4 py-2.5 text-center text-sm font-bold text-primary-foreground">
-        ⏰ A promoção dessa página acaba no dia <span className="text-gold">11/11/2026</span>
+        ⏰ Esta oferta fica disponível até <span className="text-gold">11/11/2026</span>
       </div>
 
       {/* HERO */}
@@ -113,12 +113,12 @@ function Index() {
         <h1 className="font-display text-4xl font-black leading-[1.05] sm:text-6xl">
           <span className="text-primary">365 Receitas Leves e Deliciosas,</span> Sem Açúcar, Glúten ou Lactose
         </h1>
-        <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">receitas práticas para comer bem todos os dias sem abrir mão do prazer à mesa</p>
+        <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">ideias práticas para saborear todos os dias e aproveitar cada refeição</p>
         <img src={banner.url} alt="365 Receitas Sem Açúcar, Sem Glúten e Sem Lactose" className="mx-auto mt-8 w-full max-w-xl drop-shadow-2xl" />
-        <p className="mx-auto mt-6 max-w-xl text-base font-semibold">Bolos, pães, sobremesas, lanches e refeições em versões leves e deliciosas para transformar sua rotina.</p>
-        <div className="mt-6"><Cta>Quero as 365 receitas!</Cta></div>
+        <p className="mx-auto mt-6 max-w-xl text-base font-semibold">Prepare bolos, pães, doces, lanches e refeições mais leves e saborosas para o seu dia a dia.</p>
+        <div className="mt-6"><Cta>Quero receber as 365 receitas!</Cta></div>
         <div className="mt-5 flex flex-wrap justify-center gap-2 text-xs font-bold sm:text-sm">
-          {["📱 Acesso imediato no WhatsApp", "🔒 Compra 100% Segura", "🛡️ 15 Dias de Garantia Total"].map((t) => (
+          {["📱 Acesso na hora pelo WhatsApp", "🔒 Pagamento 100% Seguro", "🛡️ Garantia Total de 15 Dias"].map((t) => (
             <span key={t} className="rounded-full border border-border bg-card px-3 py-1.5">{t}</span>
           ))}
         </div>
@@ -127,7 +127,7 @@ function Index() {
       {/* BENEFITS */}
       <section className="bg-secondary px-5 py-14">
         <div className="mx-auto max-w-3xl">
-          <Title>Benefícios do Produto:</Title>
+          <Title>O que você ganha com o produto:</Title>
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
             {benefits.map(([i, t]) => (
               <div key={t} className="card-soft flex items-center gap-3 p-4">
@@ -136,7 +136,7 @@ function Index() {
               </div>
             ))}
           </div>
-          <div className="mt-8"><Cta>Sim, quero comer bem com mais leveza</Cta></div>
+          <div className="mt-8"><Cta>Quero refeições saborosas e mais leves</Cta></div>
           <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
             {gallery.map((g, i) => <img key={g} src={g} alt={`Receita leve sem açúcar, sem glúten e sem lactose ${i + 1}`} loading="lazy" className="aspect-square w-full rounded-2xl object-cover shadow-md" />)}
           </div>
@@ -145,17 +145,17 @@ function Index() {
 
       {/* PRINTS */}
       <section className="px-5 py-14">
-        <Title>Veja o que estão dizendo das receitas:</Title>
+        <Title>Confira os comentários de quem já provou:</Title>
         <div className="no-scrollbar mx-auto mt-8 flex max-w-5xl snap-x snap-mandatory gap-4 overflow-x-auto pb-2">
           {prints.map((p, i) => <img key={p} src={p} alt={`Depoimento ${i + 1}`} loading="lazy" className="w-[78%] shrink-0 snap-center rounded-2xl border border-border shadow-md sm:w-[300px]" />)}
         </div>
-        <p className="mt-3 text-center text-sm font-bold text-muted-foreground">👈 Arraste para ver mais depoimentos 👉</p>
+        <p className="mt-3 text-center text-sm font-bold text-muted-foreground">👈 Deslize para conferir outros relatos 👉</p>
       </section>
 
       {/* RECIPES */}
       <section className="bg-secondary px-5 py-14">
         <div className="mx-auto max-w-5xl">
-          <Title>Veja o que você vai preparar:</Title>
+          <Title>Olha só o que você poderá fazer:</Title>
           <div className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
             {recipes.map(([img, t, d]) => (
               <article key={t} className="card-soft overflow-hidden">
@@ -168,9 +168,9 @@ function Index() {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <Title>+ 357 OUTRAS receitas incríveis da Chef Luana!</Title>
+            <Title>Mais 357 receitas deliciosas da Chef Luana!</Title>
             <img src={showcase.url} alt="Mosaico com prévia das 357 receitas extras da Chef Luana" loading="lazy" className="mx-auto mt-6 w-full max-w-2xl rounded-2xl shadow-lg" />
-            <p className="mt-6 font-bold">Divididas em categorias completas:</p>
+            <p className="mt-6 font-bold">Tudo organizado em categorias:</p>
             <div className="mx-auto mt-4 grid max-w-2xl gap-2 text-left sm:grid-cols-2">
               {categories.map(([c, n]) => (
                 <div key={c} className="flex items-center justify-between gap-3 rounded-xl bg-card px-4 py-3 text-sm font-bold">
@@ -179,7 +179,7 @@ function Index() {
                 </div>
               ))}
             </div>
-            <div className="mt-8"><Cta>Quero todas as 365 receitas</Cta></div>
+            <div className="mt-8"><Cta>Quero ter acesso às 365 receitas</Cta></div>
           </div>
         </div>
       </section>
@@ -187,7 +187,7 @@ function Index() {
       {/* FOR YOU */}
       <section className="px-5 py-14">
         <div className="mx-auto max-w-2xl">
-          <Title>Este cardápio é perfeito para você que:</Title>
+          <Title>Este conteúdo combina com você que:</Title>
           <ul className="mt-8 space-y-3">
             {forYou.map((t) => <li key={t} className="card-soft flex gap-3 p-4 font-semibold"><Check />{t}</li>)}
           </ul>
@@ -197,8 +197,8 @@ function Index() {
       {/* BONUS */}
       <section className="bg-dark-grad px-5 py-14">
         <div className="mx-auto max-w-5xl text-center">
-          <span className="inline-block rounded-full bg-gold px-4 py-1 text-sm font-black text-foreground">🎁 Presente Especial</span>
-          <div className="mt-4"><Title light>Compre agora e receba <span className="text-gold">+ 3 bônus exclusivos:</span></Title></div>
+          <span className="inline-block rounded-full bg-gold px-4 py-1 text-sm font-black text-foreground">🎁 Um presente para você</span>
+          <div className="mt-4"><Title light>Garanta agora e leve também <span className="text-gold">3 bônus exclusivos:</span></Title></div>
           <div className="mt-8 grid gap-5 sm:grid-cols-3">
             {bonuses.map(([img, t, d, v], i) => (
               <div key={t} className="card-soft overflow-hidden text-left">
@@ -217,54 +217,54 @@ function Index() {
               </div>
             ))}
           </div>
-          <p className="mt-8 text-lg font-black text-gold">💚 VALOR TOTAL DOS BÔNUS → TUDO GRÁTIS HOJE!</p>
+          <p className="mt-8 text-lg font-black text-gold">💚 OS BÔNUS VALEM → HOJE VOCÊ LEVA TUDO GRÁTIS!</p>
         </div>
       </section>
 
       {/* PLANS */}
       <section id="planos" className="scroll-mt-12 px-5 py-14">
         <div className="mx-auto max-w-4xl">
-          <Title>Escolha seu plano</Title>
-          <p className="mt-2 text-center text-muted-foreground">Oferta especial por tempo limitado · Acesso imediato</p>
+          <Title>Selecione a opção ideal</Title>
+          <p className="mt-2 text-center text-muted-foreground">Condição especial por tempo limitado · Acesso imediato</p>
           <div className="mt-10 grid items-start gap-6 md:grid-cols-2">
             {/* Premium first on mobile */}
             <div className="relative order-1 rounded-3xl border-4 border-primary bg-card p-6 shadow-2xl md:order-2 md:-mt-4">
-              <span className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-accent px-5 py-1.5 text-sm font-black uppercase text-accent-foreground shadow">Mais Vendida</span>
-              <p className="mt-2 text-sm font-black text-accent">🔥 Super Oferta</p>
-              <h3 className="font-display text-2xl font-black">+500 Receitas Premium</h3>
+              <span className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-accent px-5 py-1.5 text-sm font-black uppercase text-accent-foreground shadow">A preferida</span>
+              <p className="mt-2 text-sm font-black text-accent">🔥 Oferta Especial</p>
+              <h3 className="font-display text-2xl font-black">Mais de 500 Receitas Premium</h3>
               <ul className="mt-4 space-y-2 text-sm font-semibold">
-                {["500 Receitas Sem Açúcar, Glúten e Lactose", "Sobremesas, Pães, Bolos e Massas", "Receitas Cremosas Sem Lactose", "Acesso Vitalício", "Entrega Imediata por E-mail"].map((t) => <li key={t} className="flex gap-2"><Check />{t}</li>)}
+                {["500 Receitas Sem Açúcar, Glúten e Lactose", "Doces, Pães, Bolos e Massas", "Preparos Cremosos Sem Lactose", "Acesso Vitalício", "Receba imediatamente por e-mail"].map((t) => <li key={t} className="flex gap-2"><Check />{t}</li>)}
               </ul>
               <div className="mt-4 rounded-2xl bg-secondary p-4">
-                <p className="text-sm font-black text-primary-deep">Bônus Exclusivos!</p>
+                <p className="text-sm font-black text-primary-deep">Você também recebe!</p>
                 <ul className="mt-2 space-y-1.5 text-sm font-semibold">
                   {["Cardápio de 30 Dias com Refeições Leves", "Guia de Substituições Inteligentes", "Lista de Compras Essenciais"].map((t) => <li key={t}>🎁 {t}</li>)}
                 </ul>
               </div>
-              <p className="mt-5 text-center text-sm text-muted-foreground">De <span className="line-through">R$ 197,00</span> por apenas</p>
+              <p className="mt-5 text-center text-sm text-muted-foreground">De <span className="line-through">R$ 197,00</span> por somente</p>
               <p className="text-center font-display text-6xl font-black text-primary">R$ 18</p>
-              <a href={CHECKOUT_PREMIUM} className="btn-cta mt-5 text-lg">Comprar Agora</a>
+              <a href={CHECKOUT_PREMIUM} className="btn-cta mt-5 text-lg">Quero comprar</a>
             </div>
             <div className="order-2 card-soft p-6 md:order-1">
-              <p className="text-sm font-black text-muted-foreground">⚡ Oferta Básica</p>
-              <h3 className="font-display text-2xl font-black">+365 Receitas Completas</h3>
+              <p className="text-sm font-black text-muted-foreground">⚡ Plano Essencial</p>
+              <h3 className="font-display text-2xl font-black">Mais de 365 Receitas</h3>
               <ul className="mt-4 space-y-2 text-sm font-semibold">
-                {["365 Receitas Sem Açúcar, Glúten e Lactose", "Acesso Vitalício", "Entrega Imediata por E-mail"].map((t) => <li key={t} className="flex gap-2"><Check />{t}</li>)}
+                {["365 Receitas Sem Açúcar, Glúten e Lactose", "Acesso Vitalício", "Receba imediatamente por e-mail"].map((t) => <li key={t} className="flex gap-2"><Check />{t}</li>)}
               </ul>
-              <p className="mt-5 text-center text-sm text-muted-foreground">De <span className="line-through">R$ 97,00</span> por apenas</p>
+              <p className="mt-5 text-center text-sm text-muted-foreground">De <span className="line-through">R$ 97,00</span> por somente</p>
               <p className="text-center font-display text-5xl font-black">R$ 10</p>
-              <a href={CHECKOUT_BASIC} className="mt-5 flex w-full items-center justify-center rounded-full border-2 border-primary px-6 py-3.5 font-black uppercase text-primary transition hover:bg-primary hover:text-primary-foreground">Comprar Agora</a>
+              <a href={CHECKOUT_BASIC} className="mt-5 flex w-full items-center justify-center rounded-full border-2 border-primary px-6 py-3.5 font-black uppercase text-primary transition hover:bg-primary hover:text-primary-foreground">Quero comprar</a>
             </div>
           </div>
-          <p className="mt-6 text-center text-sm font-semibold text-muted-foreground">📲 Acesso imediato após a compra · Oferta válida até 11/11/2026</p>
+          <p className="mt-6 text-center text-sm font-semibold text-muted-foreground">📲 Acesso liberado após a compra · Oferta disponível até 11/11/2026</p>
         </div>
       </section>
 
       {/* REVIEWS */}
       <section className="bg-secondary px-5 py-14">
         <div className="mx-auto max-w-5xl">
-          <Title>3.500+ pessoas já transformaram sua rotina na cozinha</Title>
-          <p className="mt-2 text-center text-muted-foreground">Veja o que quem já comprou está falando.</p>
+          <Title>Mais de 3.500 pessoas renovaram a rotina na cozinha</Title>
+          <p className="mt-2 text-center text-muted-foreground">Confira as experiências de quem já adquiriu o material.</p>
           <div className="card-soft mx-auto mt-8 flex max-w-md items-center gap-6 p-6">
             <div className="text-center">
               <p className="font-display text-5xl font-black">4.9</p>
@@ -301,18 +301,18 @@ function Index() {
       <section className="px-5 py-14">
         <div className="card-soft mx-auto max-w-2xl p-8 text-center">
           <img src="https://i.imgur.com/JkRnpY1.png" alt="Selo de garantia" loading="lazy" className="mx-auto w-40" />
-          <p className="mt-4 text-sm font-black text-primary">🛡️ Risco Zero</p>
-          <Title>Garantia Incondicional de 15 Dias</Title>
-          <p className="mt-3 text-muted-foreground">Teste as receitas por 15 dias. Se não ficar 100% satisfeito(a), devolvemos todo o seu dinheiro, sem perguntas.</p>
-          <div className="mt-6"><Cta>Quero comprar com segurança</Cta></div>
+          <p className="mt-4 text-sm font-black text-primary">🛡️ Você compra sem risco</p>
+          <Title>15 Dias de Garantia Incondicional</Title>
+          <p className="mt-3 text-muted-foreground">Experimente as receitas durante 15 dias. Se não estiver totalmente satisfeito(a), devolvemos o valor pago, sem fazer perguntas.</p>
+          <div className="mt-6"><Cta>Quero garantir minha compra</Cta></div>
         </div>
       </section>
 
       {/* DELIVERY */}
       <section className="bg-secondary px-5 py-14">
         <div className="mx-auto max-w-4xl">
-          <Title>Como você vai RECEBER:</Title>
-          <p className="mt-2 text-center text-muted-foreground">Acesso liberado na hora, do seu jeitinho ✨</p>
+          <Title>Veja como o acesso CHEGA até você:</Title>
+          <p className="mt-2 text-center text-muted-foreground">Tudo liberado imediatamente para consultar como preferir ✨</p>
           <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
             {delivery.map(([i, t, d]) => (
               <div key={t} className="card-soft p-5 text-center">
@@ -329,7 +329,7 @@ function Index() {
       <section className="px-5 py-14">
         <div className="mx-auto max-w-2xl">
           <p className="text-center text-sm font-black uppercase text-primary">FAQ</p>
-          <Title>Dúvidas Frequentes</Title>
+          <Title>Perguntas Frequentes</Title>
           <div className="mt-8 space-y-3">
             {faq.map(([q, a], i) => (
               <div key={q} className="card-soft overflow-hidden">
@@ -346,7 +346,7 @@ function Index() {
 
       {/* STICKY CTA */}
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-card/95 p-3 backdrop-blur">
-        <button onClick={goPlans} className="btn-cta mx-auto max-w-md">Ver Oferta →</button>
+        <button onClick={goPlans} className="btn-cta mx-auto max-w-md">Conferir a oferta →</button>
       </div>
     </div>
   );
