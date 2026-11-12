@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import banner from "@/assets/banner-365.png.asset.json";
-import showcase from "@/assets/recipes-showcase.png.asset.json";
-import bShop from "@/assets/bonus-shopping-list.webp.asset.json";
-import bMeal from "@/assets/bonus-meal-plan.webp.asset.json";
-import bSub from "@/assets/bonus-substitutions.webp.asset.json";
-import revBrownie from "@/assets/review-brownie.jpg.asset.json";
+import banner from "@/assets/headline-mockup.png";
+import showcase from "@/assets/mais-357-receitas.png";
+import bShop from "@/assets/bonus-lista-compras.png";
+import bMeal from "@/assets/bonus-cardapio-30-dias.png";
+import bSub from "@/assets/bonus-guia-substituicoes.png";
+import revBrownie from "@/assets/review-brownie.jpg";
 
 const CHECKOUT_BASIC = "https://pay.wiapy.com/Ci6of1B5M1ll?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=";
 const CHECKOUT_PREMIUM = "https://pay.wiapy.com/3IdUSNfye7KS?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=";
@@ -67,9 +67,9 @@ const recipes = [
   ["https://i.ibb.co/WNVfYtVy/Cookies-Veganos-com-peda-os-de-Chocolate-Cozinha-Roman.webp", "Cookie Crocante Sem Glúten", "Douradinho e crocante por fora, macio por dentro"],
 ];
 const categories = [
-  ["Café da Manhã Leve", 50], ["Pães, Bolos e Massas Sem Glúten", 55], ["Almoços e Jantares Práticos", 70],
-  ["Lanches e Salgados Saudáveis", 50], ["Sobremesas Sem Açúcar", 65], ["Receitas Sem Lactose Cremosas", 35],
-  ["Molhos, Cremes e Acompanhamentos", 25], ["Bebidas, Vitaminas e Extras", 15],
+  ["Café da manhã", 45], ["Pães, bolos e massas", 55], ["Almoços e jantares", 55],
+  ["Lanches e salgados", 45], ["Sobremesas", 55], ["Receitas sem lactose", 35],
+  ["Molhos e acompanhamentos", 35], ["Bebidas e preparações extras", 40],
 ] as const;
 const forYou = [
   "Deseja se alimentar melhor sem abrir mão do sabor", "Percebe que açúcar, glúten ou lactose não caem bem na rotina",
@@ -77,17 +77,17 @@ const forYou = [
   "Precisa de sugestões rápidas para diferentes refeições", "Quer servir opções equilibradas que agradem à família",
 ];
 const bonuses = [
-  [bShop.url, "Lista de Compras Essenciais", "Saiba quais itens escolher para organizar sua despensa.", "R$ 29,90"],
-  [bMeal.url, "Cardápio de 30 Dias", "Sugestões preparadas para renovar as refeições durante o mês.", "R$ 39,90"],
-  [bSub.url, "Guia de Substituições", "Aprenda alternativas fáceis que preservam sabor e textura.", "R$ 24,90"],
+  [bShop, "Lista de Compras Essenciais", "Saiba quais itens escolher para organizar sua despensa.", "R$ 29,90"],
+  [bMeal, "Cardápio de 30 Dias", "Sugestões preparadas para renovar as refeições durante o mês.", "R$ 39,90"],
+  [bSub, "Guia de Substituições", "Aprenda alternativas fáceis que preservam sabor e textura.", "R$ 24,90"],
 ];
 const reviews = [
-  ["AM", "Ana M.", "12 de março de 2025", "Eu pensava que doces sem açúcar não tinham graça, até provar o bolo de cenoura. Ficou tão fofinho que todos aqui em casa adoraram e nem notaram diferença.", "https://i.imgur.com/UY37i9U.png", 34],
-  ["JS", "Juliana S.", "3 de abril de 2025", "As sobremesas me atraíram e já preparei brownie, brigadeiro e panqueca. São receitas práticas e deliciosas. Agora tenho alternativas sempre que quero um docinho.", revBrownie.url, 28],
-  ["CF", "Camila F.", "28 de março de 2025", "Depois de comer pães e massas, eu costumava me sentir pesada. As receitas sem glúten do livro trouxeram mais variedade para meus cafés da manhã e lanches.", "https://i.imgur.com/3xXF7tP.png", 51],
-  ["PR", "Patricia R.", "18 de fevereiro de 2025", "Minha filha não pode consumir lactose e eu não sabia mais o que preparar. Agora faço bolo, torta e até pratos cremosos que ela adora.", "https://i.imgur.com/z8Xaea1.png", 62],
-  ["RB", "Renata B.", "5 de abril de 2025", "As instruções são claras e os ingredientes são fáceis de encontrar. Preparei a torta salgada e ela já entrou para o nosso cardápio de casa.", "https://i.imgur.com/Hfbl72C.png", 47],
-  ["LC", "Larissa C.", "21 de março de 2025", "Os cookies sem glúten ficaram ótimos: crocantes por fora e macios no meio. Meu marido se surpreendeu ao saber que não levavam açúcar refinado.", "https://i.imgur.com/zGqQ3BH.png", 39],
+  ["CS", "Camila S.", "1 de abril de 2026", "Eu pensava que doces sem açúcar não tinham graça, até provar o bolo de cenoura. Ficou tão fofinho que todos aqui em casa adoraram e nem notaram diferença.", "https://i.imgur.com/UY37i9U.png", 34],
+  ["HM", "Helena M.", "4 de abril de 2026", "As sobremesas me atraíram e já preparei brownie, brigadeiro e panqueca. São receitas práticas e deliciosas. Agora tenho alternativas sempre que quero um docinho.", revBrownie, 28],
+  ["LR", "Lorena R.", "8 de abril de 2026", "Depois de comer pães e massas, eu costumava me sentir pesada. As receitas sem glúten do livro trouxeram mais variedade para meus cafés da manhã e lanches.", "https://i.imgur.com/3xXF7tP.png", 51],
+  ["BT", "Bianca T.", "9 de abril de 2026", "Minha filha não pode consumir lactose e eu não sabia mais o que preparar. Agora faço bolo, torta e até pratos cremosos que ela adora.", "https://i.imgur.com/z8Xaea1.png", 62],
+  ["LP", "Larissa P.", "21 de abril de 2026", "As instruções são claras e os ingredientes são fáceis de encontrar. Preparei a torta salgada e ela já entrou para o nosso cardápio de casa.", "https://i.imgur.com/Hfbl72C.png", 47],
+  ["RF", "Renata F.", "24 de abril de 2026", "Os cookies sem glúten ficaram ótimos: crocantes por fora e macios no meio. Meu marido se surpreendeu ao saber que não levavam açúcar refinado.", "https://i.imgur.com/zGqQ3BH.png", 39],
 ] as const;
 const delivery = [["📱", "No Celular", "Consulte de onde estiver"], ["💻", "No Computador", "Acompanhe em uma tela maior"], ["🖨️", "Para Imprimir", "Monte seu próprio caderno"], ["⚡", "Envio Imediato", "Acesso liberado em segundos"]];
 const faq = [
@@ -121,7 +121,7 @@ function Index() {
           <span className="text-primary">365 Receitas Leves e Deliciosas,</span> Sem Açúcar, Glúten ou Lactose
         </h1>
         <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">ideias práticas para saborear todos os dias e aproveitar cada refeição</p>
-        <img src={banner.url} alt="365 Receitas Sem Açúcar, Sem Glúten e Sem Lactose" className="mx-auto mt-8 w-full max-w-xl drop-shadow-2xl" />
+        <img src={banner} alt="365 Receitas Sem Açúcar, Sem Glúten e Sem Lactose" className="mx-auto mt-8 w-full max-w-xl drop-shadow-2xl" />
         <p className="mx-auto mt-6 max-w-xl text-base font-semibold">Prepare bolos, pães, doces, lanches e refeições mais leves e saborosas para o seu dia a dia.</p>
         <div className="mt-6"><Cta>Quero receber as 365 receitas!</Cta></div>
         <div className="mt-5 flex flex-wrap justify-center gap-2 text-xs font-bold sm:text-sm">
@@ -184,8 +184,8 @@ function Index() {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <Title>Mais 357 receitas deliciosas da Chef Luana!</Title>
-            <img src={showcase.url} alt="Mosaico com prévia das 357 receitas extras da Chef Luana" loading="lazy" className="mx-auto mt-6 w-full max-w-2xl rounded-2xl shadow-lg" />
+            <Title>+365 receitas deliciosas para transformar sua alimentação!</Title>
+            <img src={showcase} alt="Mosaico com prévia das 357 receitas extras da Chef Luana" loading="lazy" className="mx-auto mt-6 w-full max-w-2xl rounded-2xl shadow-lg" />
             <p className="mt-6 font-bold">Tudo organizado em categorias:</p>
             <div className="mx-auto mt-4 grid max-w-2xl gap-2 text-left sm:grid-cols-2">
               {categories.map(([c, n]) => (
@@ -304,9 +304,9 @@ function Index() {
           <p className="mt-2 text-center text-muted-foreground">Confira as experiências de quem já adquiriu o material.</p>
           <div className="card-soft mx-auto mt-8 flex max-w-md items-center gap-6 p-6">
             <div className="text-center">
-              <p className="font-display text-5xl font-black">4.9</p>
+              <p className="font-display text-5xl font-black">4.8</p>
               <p className="text-gold">★★★★★</p>
-              <p className="text-xs text-muted-foreground">3.541 avaliações</p>
+              <p className="text-xs text-muted-foreground">2.543 avaliações</p>
             </div>
             <div className="flex-1 space-y-1">
               {[5, 4, 3, 2, 1].map((n) => (
@@ -381,10 +381,6 @@ function Index() {
         </div>
       </section>
 
-      {/* STICKY CTA */}
-      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-card/95 p-3 backdrop-blur">
-        <button onClick={goPlans} className="btn-cta mx-auto max-w-md">Conferir a oferta →</button>
-      </div>
     </div>
   );
 }
