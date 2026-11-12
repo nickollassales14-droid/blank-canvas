@@ -161,7 +161,6 @@ function Index() {
             ))}
           </div>
         </div>
-        <p className="mt-3 text-center text-sm font-bold text-muted-foreground">👈 Deslize para conferir outros relatos 👉</p>
       </section>
 
       {/* RECIPES */}
