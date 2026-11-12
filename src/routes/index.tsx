@@ -102,6 +102,7 @@ function Check() {
 
 function Index() {
   const [open, setOpen] = useState<number | null>(0);
+  const [simpleOfferOpen, setSimpleOfferOpen] = useState(false);
   return (
     <div className="min-h-screen bg-background pb-24 text-foreground">
       <div className="sticky top-0 z-40 bg-primary-deep px-4 py-2.5 text-center text-sm font-bold text-primary-foreground">
@@ -253,12 +254,33 @@ function Index() {
               </ul>
               <p className="mt-5 text-center text-sm text-muted-foreground">De <span className="line-through">R$ 97,00</span> por somente</p>
               <p className="text-center font-display text-5xl font-black">R$ 10</p>
-              <a href={CHECKOUT_BASIC} className="mt-5 flex w-full items-center justify-center rounded-full border-2 border-primary px-6 py-3.5 font-black uppercase text-primary transition hover:bg-primary hover:text-primary-foreground">Quero comprar</a>
+              <button type="button" onClick={() => setSimpleOfferOpen(true)} className="mt-5 flex w-full items-center justify-center rounded-full border-2 border-primary px-6 py-3.5 font-black uppercase text-primary transition hover:bg-primary hover:text-primary-foreground">Quero comprar</button>
             </div>
           </div>
           <p className="mt-6 text-center text-sm font-semibold text-muted-foreground">📲 Acesso liberado após a compra · Oferta disponível até 11/11/2026</p>
         </div>
       </section>
+
+      {simpleOfferOpen && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center overflow-y-auto bg-foreground/60 p-4 backdrop-blur-sm" onClick={() => setSimpleOfferOpen(false)}>
+          <section role="dialog" aria-modal="true" aria-labelledby="simple-offer-title" className="relative my-auto w-full max-w-lg animate-in zoom-in-95 rounded-3xl border-2 border-primary bg-card p-6 text-foreground shadow-2xl duration-300 sm:p-8" onClick={(event) => event.stopPropagation()}>
+            <button type="button" aria-label="Fechar oferta" onClick={() => setSimpleOfferOpen(false)} className="absolute right-4 top-4 grid h-9 w-9 place-items-center rounded-full bg-secondary text-xl font-bold text-foreground transition hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">×</button>
+            <span className="inline-flex rounded-full bg-accent px-4 py-1.5 text-xs font-black uppercase text-accent-foreground">Oferta especial para você</span>
+            <h2 id="simple-offer-title" className="mt-4 pr-7 font-display text-3xl font-black leading-tight sm:text-4xl">Uma oferta especial antes de ir!</h2>
+            <p className="mt-2 text-muted-foreground">Leve mais praticidade para sua rotina com este pacote:</p>
+            <ul className="mt-5 space-y-3 rounded-2xl bg-secondary p-4 text-sm font-bold sm:text-base">
+              {["365 receitas", "Cardápio de 30 dias", "Guia de substituições inteligentes"].map((item) => <li key={item} className="flex items-center gap-3"><Check />{item}</li>)}
+            </ul>
+            <div className="mt-5 rounded-2xl bg-primary-deep p-5 text-center text-primary-foreground">
+              <p className="text-sm font-bold">Oferta especial</p>
+              <p className="mt-1 text-sm">De <span className="line-through">R$ 80,00</span> por apenas</p>
+              <p className="font-display text-5xl font-black text-gold">R$ 18</p>
+            </div>
+            <button type="button" className="btn-cta mt-5">Quero aproveitar a oferta</button>
+            <a href={CHECKOUT_BASIC} className="mt-3 flex w-full items-center justify-center rounded-full border-2 border-primary px-5 py-3 text-center text-sm font-black uppercase text-primary transition hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">Não, obrigado. Ir para o checkout essencial</a>
+          </section>
+        </div>
+      )}
 
       {/* REVIEWS */}
       <section className="bg-secondary px-5 py-14">
