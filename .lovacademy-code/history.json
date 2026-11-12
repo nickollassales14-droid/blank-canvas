@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "updated_at": "2026-11-12T00:32:34.834Z",
+  "messages": [
+    {
+      "role": "user",
+      "text": "Oque voce ve na headline da pagina?",
+      "attachments": []
+    },
+    {
+      "role": "assistant",
+      "text": "Não consigo ver a página neste contexto. Se você me disser qual página ou compartilhar o link, posso identificar o que aparece na headline."
+    }
+  ]
+}
