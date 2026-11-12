@@ -242,7 +242,7 @@ function Index() {
                 </ul>
               </div>
               <p className="mt-5 text-center text-sm text-muted-foreground">De <span className="line-through">R$ 197,00</span> por somente</p>
-              <p className="text-center font-display text-6xl font-black text-primary">R$ 18</p>
+              <p className="text-center font-display text-6xl font-black text-primary">R$ 27</p>
               <a href={CHECKOUT_PREMIUM} className="btn-cta mt-5 text-lg">Quero comprar</a>
             </div>
             <div className="order-2 card-soft p-6 md:order-1">
