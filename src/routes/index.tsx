@@ -6,6 +6,11 @@ import bShop from "@/assets/bonus-shopping-list.webp.asset.json";
 import bMeal from "@/assets/bonus-meal-plan.webp.asset.json";
 import bSub from "@/assets/bonus-substitutions.webp.asset.json";
 import revBrownie from "@/assets/review-brownie.jpg.asset.json";
+import testimonial1 from "@/assets/depoimento-1.png.asset.json";
+import testimonial2 from "@/assets/depoimento-2.png.asset.json";
+import testimonial3 from "@/assets/depoimento-3.png.asset.json";
+import testimonial4 from "@/assets/depoimento-4.png.asset.json";
+import testimonial5 from "@/assets/depoimento-5.png.asset.json";
 
 const CHECKOUT_BASIC = "https://pay.wiapy.com/Ci6of1B5M1ll?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=";
 const CHECKOUT_PREMIUM = "https://pay.wiapy.com/3IdUSNfye7KS?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=";
@@ -49,7 +54,7 @@ const benefits = [
   ["✨", "Mais variedade para sair da rotina"], ["📱", "Consulte no celular ou imprima"],
 ];
 const gallery = ["https://i.imgur.com/54fZgju.png", "https://i.imgur.com/JCYrYsk.png", "https://i.imgur.com/BWTdeN8.png", "https://i.imgur.com/8zjkqxs.png"];
-const prints = ["https://i.imgur.com/c9fOqG0.png", "https://i.imgur.com/1KLUKCZ.png", "https://i.imgur.com/ag5ojSh.png", "https://i.imgur.com/FHc94su.png"];
+const prints = [testimonial1.url, testimonial2.url, testimonial3.url, testimonial4.url, testimonial5.url];
 const recipes = [
   ["https://i.imgur.com/9XqdBay.png", "Bolo de Cenoura com Cobertura Cremosa", "Bem fofinho, na medida certa e sem açúcar refinado"],
   ["https://i.imgur.com/1yPajyN.png", "Pão Caseiro Sem Glúten", "Leve, fácil de preparar e ótimo para o café"],
@@ -147,8 +152,14 @@ function Index() {
       {/* PRINTS */}
       <section className="px-5 py-14">
         <Title>Confira os comentários de quem já provou:</Title>
-        <div className="no-scrollbar mx-auto mt-8 flex max-w-5xl snap-x snap-mandatory gap-4 overflow-x-auto pb-2">
-          {prints.map((p, i) => <img key={p} src={p} alt={`Depoimento ${i + 1}`} loading="lazy" className="w-[78%] shrink-0 snap-center rounded-2xl border border-border shadow-md sm:w-[300px]" />)}
+        <div className="testimonial-carousel no-scrollbar mx-auto mt-8 max-w-5xl overflow-hidden pb-2">
+          <div className="testimonial-track">
+            {[0, 1].map((copy) => (
+              <div key={copy} className="testimonial-sequence" aria-hidden={copy === 1 ? true : undefined}>
+                {prints.map((p, i) => <img key={p} src={p} alt={copy === 0 ? `Depoimento ${i + 1}` : ""} loading="eager" decoding="async" width={1080} height={1080} className="testimonial-image shrink-0 rounded-2xl border border-border shadow-md" />)}
+              </div>
+            ))}
+          </div>
         </div>
         <p className="mt-3 text-center text-sm font-bold text-muted-foreground">👈 Deslize para conferir outros relatos 👉</p>
       </section>
