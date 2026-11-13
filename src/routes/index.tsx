@@ -9,6 +9,7 @@ import revBrownie from "@/assets/review-brownie.jpg";
 
 const CHECKOUT_BASIC = "https://pay.wiapy.com/Ci6of1B5M1ll?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=";
 const CHECKOUT_PREMIUM = "https://pay.wiapy.com/3IdUSNfye7KS?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=";
+const CHECKOUT_SPECIAL = "https://pay.cakto.com.br/i94evov_1317438";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -291,7 +292,7 @@ function Index() {
               <p className="mt-1 text-sm">De <span className="line-through">R$ 80,00</span> por apenas</p>
               <p className="font-display text-5xl font-black text-gold">R$ 18</p>
             </div>
-            <button type="button" className="btn-cta mt-5">Quero aproveitar a oferta</button>
+            <a href={CHECKOUT_SPECIAL} className="btn-cta mt-5">Quero aproveitar a oferta</a>
             <a href={CHECKOUT_BASIC} className="mt-3 flex w-full items-center justify-center rounded-full border-2 border-primary px-5 py-3 text-center text-sm font-black uppercase text-primary transition hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">Não, obrigado. Ir para o checkout essencial</a>
           </section>
         </div>
