@@ -270,7 +270,7 @@ function Index() {
               </ul>
               <p className="mt-5 text-center text-sm text-muted-foreground">De <span className="line-through">R$ 97,00</span> por somente</p>
               <p className="text-center font-display text-5xl font-black">R$ 10</p>
-              <a href={CHECKOUT_BASIC} className="mt-5 flex w-full items-center justify-center rounded-full border-2 border-primary px-6 py-3.5 font-black uppercase text-primary transition hover:bg-primary hover:text-primary-foreground">Quero comprar</a>
+              <button type="button" onClick={() => setSimpleOfferOpen(true)} className="mt-5 flex w-full items-center justify-center rounded-full border-2 border-primary px-6 py-3.5 font-black uppercase text-primary transition hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">Quero comprar</button>
             </div>
           </div>
           <p className="mt-6 text-center text-sm font-semibold text-muted-foreground">📲 Acesso liberado após a compra · Oferta disponível até 11/11/2026</p>
