@@ -7,8 +7,8 @@ import bMeal from "@/assets/bonus-cardapio-30-dias.png";
 import bSub from "@/assets/bonus-guia-substituicoes.png";
 import revBrownie from "@/assets/review-brownie.jpg";
 
-const CHECKOUT_BASIC = "https://pay.wiapy.com/Ci6of1B5M1ll?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=";
-const CHECKOUT_PREMIUM = "https://pay.wiapy.com/3IdUSNfye7KS?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=";
+const CHECKOUT_BASIC = "https://pay.cakto.com.br/33wqmvw_1304921";
+const CHECKOUT_PREMIUM = "https://pay.cakto.com.br/yyp4n7z_1276637";
 const CHECKOUT_SPECIAL = "https://pay.cakto.com.br/i94evov_1317438";
 
 export const Route = createFileRoute("/")({
@@ -270,7 +270,7 @@ function Index() {
               </ul>
               <p className="mt-5 text-center text-sm text-muted-foreground">De <span className="line-through">R$ 97,00</span> por somente</p>
               <p className="text-center font-display text-5xl font-black">R$ 10</p>
-              <button type="button" onClick={() => setSimpleOfferOpen(true)} className="mt-5 flex w-full items-center justify-center rounded-full border-2 border-primary px-6 py-3.5 font-black uppercase text-primary transition hover:bg-primary hover:text-primary-foreground">Quero comprar</button>
+              <a href={CHECKOUT_BASIC} className="mt-5 flex w-full items-center justify-center rounded-full border-2 border-primary px-6 py-3.5 font-black uppercase text-primary transition hover:bg-primary hover:text-primary-foreground">Quero comprar</a>
             </div>
           </div>
           <p className="mt-6 text-center text-sm font-semibold text-muted-foreground">📲 Acesso liberado após a compra · Oferta disponível até 11/11/2026</p>
